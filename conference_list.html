@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conference List</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Conference List</h1>
+    <ul>
+        {% for conference in conference_list %}
+            <li>
+                <h2>{{ conference.title }}</h2>
+                <p>{{ conference.description }}</p>
+                <p>Date: {{ conference.date }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
